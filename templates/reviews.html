@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% for book in reviews %}
+            {{book.book_name}}
+            {{book.book_author}}
+            {{book.book_genre}}
+            {{book.book_review}}
+            {{book.book_image}}
+            {{book.book_link}}
+        {% endfor %}
+    </body>
+</html>
