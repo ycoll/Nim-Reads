@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-
-    </head>
-    <body>
+{% extends 'base.html' %}
+{% block content %}
         {% for book in reviews %}
             {{book.book_name}}
             {{book.book_author}}
@@ -12,5 +8,5 @@
             {{book.book_image}}
             {{book.book_link}}
         {% endfor %}
-    </body>
-</html>
+     
+{% endblock %}
