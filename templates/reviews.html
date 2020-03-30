@@ -1,12 +1,33 @@
 {% extends 'base.html' %}
 {% block content %}
-        {% for book in reviews %}
-            {{book.book_name}}
-            {{book.book_author}}
-            {{book.book_genre}}
-            {{book.book_review}}
-            {{book.book_image}}
-            {{book.book_link}}
-        {% endfor %}
-     
+        
+        
+       
+   <!-- book review template-->        
+    {% for book in reviews %}    
+    <div class="container">
+    <div class="row">
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img class="activator" src="{{book.book_image}}" alt="book cover image">
+          <span class="card-title"> {{book.book_name}}</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+        <div class="card-content">
+          <p>Click on the cover to reveal the review!</p>
+          <p>Author: {{book.book_author}}</p>
+          <p>Genre: {{book.book_genre}}</p>
+          <a href="{{book.book_link}}" target="_blank">Buy Here!</a>
+          
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i> Review of '{{book.book_name}}' by {{book.book_author}}</span>
+          <p>{{book.book_review}}</p>
+        </div>
+      </div>
+    </div>
+  </div> 
+  </div>
+   {% endfor %}
 {% endblock %}
