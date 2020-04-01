@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
-from bson.objectid import ObjectId 
+from bson.objectid import ObjectId
 
 if os.path.exists("env.py"):
     import env
@@ -21,7 +21,19 @@ def get_reviews():
     return render_template("reviews.html", reviews=mongo.db.reviews.find())
 
 
-if __name__ == '__main__':  
+@app.route('/add_review')
+def add_review():
+    return render_template('addreview.html')
+
+
+@app.route('/insert_review', methods=['POST'])
+def insert_review():
+    reviews = mongo.db.reviews
+    reviews.insert_one(request.form.to_dict())
+    return redirect(url_for('get_reviews'))
+
+
+if __name__ == '__main__':
     app.run(host=os.environ.get('IP', '0.0.0.0'),
             port=(os.environ.get('PORT', '5000')),
             debug=True)
