@@ -1,40 +1,41 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h3>Add a Review</h3>
+<h3>Edit Review</h3>
+
 <div class="row">
-	<form action="{{ url_for('insert_review') }}" method="POST" class="col s12">
+	<form action="{{ url_for('update_review', book_id=book._id) }}" method="POST" class="col s12">
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">book</i>
-				<input  id="book_name" name="book_name" type="text" class="validate" required>
+                <input  id="book_name" name="book_name" type="text" class="validate" value ="{{book.book_name}}" required >
 				<label for="book_name">Book Title</label>
 			</div>
 			<div class="input-field col s12">
 				<i class="material-icons prefix">face</i>
-				<input id="book_author" name="book_author" type="text" class="validate" required>
+				<input id="book_author" name="book_author" type="text" class="validate" value ="{{book.book_author}}" required>
 				<label for="book_author">Authors Name</label>
 
 			</div>
 			<div class="input-field col s12">
 				<i class="material-icons prefix">mood</i>
-				<input id="book_genre" name="book_genre" type="text" class="validate" required>
+				<input id="book_genre" name="book_genre" type="text" class="validate" value ="{{book.book_genre}}" required>
 				<label for="book_genre">Genre</label>
 			</div>
 			<div class="input-field col s12">
 				<i class="material-icons prefix">create</i>
-				<textarea id="book_review" name="book_review" class="materialize-textarea" required></textarea>
+				<textarea id="book_review" name="book_review" class="materialize-textarea" required>{{book.book_review}}</textarea>
 				<label for="book_review">Write review here</label>
 			</div>
 
 			<div class="input-field col s12">
 				<i class="material-icons prefix">crop_original</i>
-				<input id="book_image" name="book_image" type="text" class="validate" required>
+				<input id="book_image" name="book_image" type="text" class="validate" value ="{{book.book_image}}" required>
 				<label for="book_image">Please provide an image link for your book cover</label>
 			</div>
 			<div class="input-field col s12">
 				<i class="material-icons prefix">laptop</i>
-				<input id="book_link" name="book_link" type="text" class="validate" required>
+				<input id="book_link" name="book_link" type="text" class="validate" value ="{{book.book_link}}" required>
 				<label for="book_link">Please provide a link to a website that sells this book</label>
 			</div>
 			<div class="input-field col s12">

@@ -33,6 +33,27 @@ def insert_review():
     return redirect(url_for('get_reviews'))
 
 
+@app.route('/edit_review/<book_id>')
+def edit_review(book_id):
+    the_book = mongo.db.reviews.find_one({"_id": ObjectId(book_id)})
+    return render_template('editreview.html', book=the_book)
+
+
+@app.route('/update_review/<book_id>', methods=["POST"])
+def update_review(book_id):
+    reviews = mongo.db.reviews
+    reviews.update({'_id': ObjectId(book_id)},
+                   {
+        'book_name': request.form.get('book_name'),
+        'book_author': request.form.get('book_author'),
+        'book_genre': request.form.get('book_genre'),
+        'book_review': request.form.get('book_review'),
+        'book_image': request.form.get('book_image'),
+        'book_link': request.form.get('book_link')
+    })
+    return redirect(url_for('get_reviews'))
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP', '0.0.0.0'),
             port=(os.environ.get('PORT', '5000')),

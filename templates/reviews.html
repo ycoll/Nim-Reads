@@ -12,15 +12,13 @@
 				<div class="card-image">
 					<img class="activator" src="{{book.book_image}}" alt="book cover image">
 					<span class="card-title"> {{book.book_name}}</span>
-					<a
-						class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">create</i></a>
+					<a href="{{url_for('edit_review', book_id=book._id)}}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">create</i></a>
 				</div>
 				<div class="card-content">
-					<p>Click on the cover to reveal the review!</p>
 					<p>Author: {{book.book_author}}</p>
 					<p>Genre: {{book.book_genre}}</p>
+					<p>Click on the cover to reveal the review!</p>
 					<a href="{{book.book_link}}" target="_blank">Buy Here!</a>
-
 				</div>
 				<div class="card-reveal">
 					<span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i> Review of '{{book.book_name}}' by {{book.book_author}}</span>
