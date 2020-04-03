@@ -54,6 +54,12 @@ def update_review(book_id):
     return redirect(url_for('get_reviews'))
 
 
+@app.route('/delete_review/<book_id>')
+def delete_review(book_id):
+    mongo.db.reviews.remove({'_id': ObjectId(book_id)})
+    return redirect(url_for('get_reviews'))
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP', '0.0.0.0'),
             port=(os.environ.get('PORT', '5000')),

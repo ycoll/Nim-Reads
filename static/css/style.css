@@ -1,3 +1,14 @@
-body{
-    
+body {
+   
+  }
+
+.row:after{
+    display: none;
+
 }
+
+.card-review{
+    padding: 2%;
+}
+
+  

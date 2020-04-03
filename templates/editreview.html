@@ -8,7 +8,7 @@
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="material-icons prefix">book</i>
-                <input  id="book_name" name="book_name" type="text" class="validate" value ="{{book.book_name}}" required >
+				<input  id="book_name" name="book_name" type="text" class="validate" value ="{{book.book_name}}" required >
 				<label for="book_name">Book Title</label>
 			</div>
 			<div class="input-field col s12">
@@ -24,7 +24,7 @@
 			</div>
 			<div class="input-field col s12">
 				<i class="material-icons prefix">create</i>
-				<textarea id="book_review" name="book_review" class="materialize-textarea" required>{{book.book_review}}</textarea>
+				<textarea id="book_review" name="book_review" class="materialize-textarea" maxlength="1000" data-length="1000" required>{{book.book_review}}</textarea>
 				<label for="book_review">Write review here</label>
 			</div>
 
@@ -40,11 +40,12 @@
 			</div>
 			<div class="input-field col s12">
 				<button class="btn waves-effect waves-light" type="submit" name="action">Submit
-              <i class="material-icons right">send</i>
-         </button>
+              <i class="material-icons right">send</i></button>
+              <a href="{{url_for('delete_review', book_id=book._id)}}" class="waves-effect waves-light btn">Delete review</a>
 			</div>
 		</div>
 	</form>
+     
 </div>
 
 {% endblock %}
