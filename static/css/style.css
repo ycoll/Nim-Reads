@@ -1,7 +1,48 @@
-body {
+/***********************Lnding page/Reviews*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+body,
+html {
+
+   
    
   }
 
+  nav{
+      font-family: 'Libre Baskerville', serif;
+      background-color: #142850;
+  }
+
+
+.img1 {
+    background-image: url(../img/image1.jpg);
+    position: relative;
+    opacity: 0.60;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    min-width: 100vw;
+
+}
+
+.img-text{
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    bottom: 40%;
+    left: 20%;
+    right: 20%;
+     
+    width: 60%;
+    color: #142850;
+    font-family: 'Libre Baskerville', serif;
+
+}
+.review-heading{
+    
+     font-family: 'Libre Baskerville', serif;
+}
 .row:after{
     display: none;
 
@@ -9,6 +50,7 @@ body {
 
 .card-review{
     padding: 2%;
+    
 }
 
   

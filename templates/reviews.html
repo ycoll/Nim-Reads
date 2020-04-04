@@ -2,28 +2,41 @@
 {% block content %}
 
 
-
+<div class="img1">
+</div>
+<div class="img-text center-align flow-text">
+				<h2>Find your new favourite book!</h2>
+				<h4>Add and Read great book reviews</h4>
+			</div>
+<div class="row">
+		<div class="col s12">
+			<h2 class="review-heading center-align">Reviews</h2>
+            <p>Click on a cover to reveal the review</p>
+            <p>Click the pencil button to edit/delete a review</p>
+		</div>
+	</div>
 <!-- book review template-->
 {% for book in reviews %}
 <div class="container">
+
 	<div class="row">
 		<div class="col s12 m12 l4">
 			<div class="card card-review">
 				<div class="card-image">
 					<img class="activator" src="{{book.book_image}}" alt="book cover image">
-					
-					<a href="{{url_for('edit_review', book_id=book._id)}}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">create</i></a>
+
+					<a href="{{url_for('edit_review', book_id=book._id)}}"
+						class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">create</i></a>
 				</div>
 				<div class="card-content flow-text">
-                    <p><strong>Title:</strong> {{book.book_name}}</p>
+					<p><strong>Title:</strong> {{book.book_name}}</p>
 					<p><strong>Author:</strong> {{book.book_author}}</p>
-					<p>Genre: {{book.book_genre}}</p>
-					<p>Click on the cover to reveal the review!</p>
-					<a href="{{book.book_link}}" target="_blank">Buy Here!</a>
+					<p><strong>Genre:</strong> {{book.book_genre}}</p>
 				</div>
 				<div class="card-reveal">
 					<span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i> Review of '{{book.book_name}}' by {{book.book_author}}</span>
 					<p>{{book.book_review}}</p>
+					<a href="{{book.book_link}}" target="_blank">Buy Here!</a>
 				</div>
 			</div>
 		</div>
