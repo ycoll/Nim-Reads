@@ -14,24 +14,30 @@
 <body>
 	<header>
 		<!--Navbar-->
-		<nav>
-			<div class="nav-wrapper flow-text">
-				<a href="{{url_for('get_reviews')}}" class="brand-logo">Nim Reads</a>
-				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li><a href="{{url_for('get_reviews')}}">Home</a></li>
-					<li><a href="{{url_for('add_review')}}">Add a Review!</a></li>
-				</ul>
-				<ul class="side-nav" id="mobile-demo">
-					<li><a href="{{url_for('get_reviews')}}">Home</a></li>
-					<li><a href="{{url_for('add_review')}}">Add a Review!</a></li>
-				</ul>
-			</div>
-		</nav>
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper flow-text">
+					<a href="{{url_for('get_reviews')}}" class="brand-logo">Nim Reads</a>
+					<a href="#" data-activates="mobile-demo"
+						class="button-collapse"><i class="material-icons">menu</i></a>
+					<ul id="nav-mobile" class="right hide-on-med-and-down">
+						<li><a href="{{url_for('get_reviews')}}">Home</a></li>
+						<li><a href="{{url_for('add_review')}}">Add a Review!</a></li>
+					</ul>
+					<ul class="side-nav" id="mobile-demo">
+						<li><a href="{{url_for('get_reviews')}}">Home</a></li>
+						<li><a href="{{url_for('add_review')}}">Add a Review!</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
 	</header>
 	<!---->
+   
 	{% block content %}
-	{% endblock %}
+    {% endblock %}
+   
+	
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

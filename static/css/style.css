@@ -43,6 +43,11 @@ html {
     
      font-family: 'Libre Baskerville', serif;
 }
+
+
+.card .card-image img{
+    height: 55vh;
+}
 .row:after{
     display: none;
 
