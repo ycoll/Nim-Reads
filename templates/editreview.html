@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h3>Edit Review</h3>
+<h3 class="sub-headings flow-text center-align">Edit Review</h3>
 
 <div class="row">
 	<form action="{{ url_for('update_review', book_id=book._id) }}" method="POST" class="col s12">
@@ -39,9 +39,9 @@
 				<label for="book_link">Please provide a link to a website that sells this book</label>
 			</div>
 			<div class="input-field col s12">
-				<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+				<button class="btn waves-effect waves-light submit-button" type="submit" name="action">Submit
               <i class="material-icons right">send</i></button>
-              <a href="{{url_for('delete_review', book_id=book._id)}}" class="waves-effect waves-light btn">Delete review</a>
+              <a href="{{url_for('delete_review', book_id=book._id)}}" class="waves-effect waves-light btn submit-button">Delete review</a>
 			</div>
 		</div>
 	</form>

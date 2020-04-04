@@ -40,10 +40,11 @@ html {
 
 }
 .review-heading{
-    
-     font-family: 'Libre Baskerville', serif;
+    font-family: 'Libre Baskerville', serif;
+    color: #142850;
+    margin-top: 5%;
+    margin-bottom: 3%;
 }
-
 
 .card .card-image img{
     height: 55vh;
@@ -58,4 +59,11 @@ html {
     
 }
 
-  
+.sub-headings{
+     font-family: 'Libre Baskerville', serif;
+     color: #142850;
+} 
+
+.submit-button{
+    background-color: #142850;
+}
