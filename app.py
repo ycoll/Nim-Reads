@@ -58,6 +58,11 @@ def update_review(book_id):
 def delete_review(book_id):
     mongo.db.reviews.remove({'_id': ObjectId(book_id)})
     return redirect(url_for('get_reviews'))
+    
+
+@app.route('/contact')
+def contact():
+    return render_template("contact.html")
 
 
 if __name__ == '__main__':

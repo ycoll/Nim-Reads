@@ -9,6 +9,13 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css" />
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function(){
+      emailjs.init("user_2XLNWuqeljGFG1tggK7In");
+   })();
+	</script>
 </head>
 
 <body>
@@ -23,6 +30,7 @@
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
 						<li><a href="{{url_for('get_reviews')}}">Home</a></li>
 						<li><a href="{{url_for('add_review')}}">Add a Review!</a></li>
+                        <li><a href="{{url_for('contact')}}">Get in touch</a></li>
 					</ul>
 					<ul class="side-nav" id="mobile-demo">
 						<li><a href="{{url_for('get_reviews')}}">Home</a></li>
@@ -33,11 +41,11 @@
 		</div>
 	</header>
 	<!---->
-   
+
 	{% block content %}
-    {% endblock %}
-   
-	
+	{% endblock %}
+
+
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
