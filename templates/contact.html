@@ -7,18 +7,18 @@
 	<form id="myForm" onsubmit="return sendMail(this);" class="col s12 center-align">
 		<div class="row">
 			<div class="input-field col s6 ">
-				<input  id="usr" type="text" name="name" class="validate">
+				<input  id="usr" type="text" name="name" class="validate" required>
 				<label for="name">Name</label>
 			</div>
 			<div class="row">
 				<div class="input-field col s6 ">
-					<input id="email" type="email" name="email" class="validate">
+					<input id="email" type="email" name="email" class="validate" required>
 					<label for="email">Email</label>
 				</div>
 			</div>
 			<div class="row">
 				<div class="input-field col s12 ">
-					<textarea id="textarea1" class="materialize-textarea" name="message"></textarea>
+					<textarea id="textarea1" class="materialize-textarea" name="message" required></textarea>
 					<label for="textarea1">Message</label>
 				</div>
 			</div>
