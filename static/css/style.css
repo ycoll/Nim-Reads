@@ -33,7 +33,7 @@ nav{
 }
 
 
-
+/******************************Image/Text*/
 .img1 {
 
     background-image: url(../img/image1.jpg);
@@ -71,6 +71,8 @@ nav{
     font-size: 1.6rem;
     font-family: 'Oswald', sans-serif;
 }
+
+/******************************Reviews*/
 .review-heading{
     font-family: 'Pacifico', cursive;
     color: #142850;
@@ -100,6 +102,7 @@ nav{
     
 }
 
+/******************************Add/Edit Review pages*/
 .sub-headings{
      font-family: 'Pacifico', cursive;
      color: #142850;
@@ -112,4 +115,11 @@ nav{
     font-family: 'Pacifico', cursive;
     text-transform: lowercase;
     font-size: 1.4rem;
+    margin-bottom: 2%;
+}
+
+
+/******************************Contact*/
+#myForm{
+    margin-top: 7%;
 }
