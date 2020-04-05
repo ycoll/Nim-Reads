@@ -4,10 +4,10 @@ This is my third Milestone Project for the 'Data Centric Development' module wit
 
 I have created a book review website that has full CRUD functionailty and works on all devices. Users can Create reviews through a form, Read reviews on the landing page, Edit and Delete reviews with the click of a button.
 
-[Heroku Website link here]() 
+[Heroku Website link here](https://nim-reads.herokuapp.com/) 
 ## UX
  
-My main goal when designing this website was to create something that fully implements CRUD functionality in an easy to use and visually appealing way. I went for dark blue and white for a clean look that promotes readablity and I wanted the books/reviews to be the main focal point. I decided on typography that was visually interesting but also easy to read.   
+My main goal when designing this website was to create something that fully implements CRUD functionality in an easy to use and visually appealing way. I went for dark blue and white for a clean look that promotes readability and I wanted the books/reviews to be the main focal point. I decided on typography that was visually interesting but also easy to read.   
 
 User Stories:
 - As a user, I want to read reviews.
