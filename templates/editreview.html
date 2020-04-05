@@ -41,11 +41,12 @@
 			<div class="input-field col s12">
 				<button class="btn waves-effect waves-light submit-button" type="submit" name="action">Submit
               <i class="material-icons right">send</i></button>
-              <a href="{{url_for('delete_review', book_id=book._id)}}" class="waves-effect waves-light btn submit-button">Delete review</a>
+				<a href="{{url_for('delete_review', book_id=book._id)}}"
+					class="waves-effect waves-light btn submit-button">Delete review</a>
 			</div>
 		</div>
 	</form>
-     
+
 </div>
 
 {% endblock %}

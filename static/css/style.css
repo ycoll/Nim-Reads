@@ -1,19 +1,41 @@
-/***********************Lnding page/Reviews*/
+/***********************Landing page/Reviews*/
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Pacifico&display=swap');
+
 body,
 html {
+   height: 100%;
 
    
    
   }
 
-  nav{
-      font-family: 'Libre Baskerville', serif;
+/******************************Navbar*/
+nav{
+      font-family: 'Pacifico', cursive;
       background-color: #142850;
+
+
   }
+
+
+.navbar-fixed { 
+    z-index: 998; 
+
+
+}
+
+.nav-text{
+      font-size: 2rem;
+      position: relative;
+      
+
+}
+
 
 
 .img1 {
+
     background-image: url(../img/image1.jpg);
     position: relative;
     opacity: 0.60;
@@ -36,21 +58,40 @@ html {
      
     width: 60%;
     color: #142850;
-    font-family: 'Libre Baskerville', serif;
+    
 
 }
+.main-heading{
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Pacifico', cursive;
+}
+
+.p1{
+    font-size: 1.6rem;
+    font-family: 'Oswald', sans-serif;
+}
 .review-heading{
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Pacifico', cursive;
     color: #142850;
     margin-top: 5%;
     margin-bottom: 3%;
 }
 
+ h2{
+    font-size: 3rem;
+}
+
 .card .card-image img{
     height: 55vh;
+
+
 }
+
+
 .row:after{
     display: none;
+
 
 }
 
@@ -60,10 +101,15 @@ html {
 }
 
 .sub-headings{
-     font-family: 'Libre Baskerville', serif;
+     font-family: 'Pacifico', cursive;
      color: #142850;
+     font-size: 2rem;
+     
 } 
 
 .submit-button{
     background-color: #142850;
+    font-family: 'Pacifico', cursive;
+    text-transform: lowercase;
+    font-size: 1.4rem;
 }

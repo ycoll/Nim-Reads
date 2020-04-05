@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = 'nim_reads'
 app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
-print(os.getenv('MONGO_URI'))
+
 
 mongo = PyMongo(app)
 
