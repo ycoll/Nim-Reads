@@ -100,6 +100,16 @@ nav{
 .card-review{
     padding: 2%;
     
+    
+}
+
+.book-heading{
+    font-family: 'Pacifico', cursive;
+
+}
+
+.review-p{
+    font-size: 1.3rem;
 }
 
 /******************************Add/Edit Review pages*/
@@ -118,6 +128,9 @@ nav{
     margin-bottom: 2%;
 }
 
+.submit-button:hover{
+    background-color: #315b96;
+}
 
 /******************************Contact*/
 #myForm{
