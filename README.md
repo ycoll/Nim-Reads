@@ -1,6 +1,6 @@
 # Nim Reads
 
-This is my third Milestone Project for the 'Data Centric Development' module with the Code Institute.
+
 
 I have created a book review website that has full CRUD functionailty and works on all devices. Users can Create reviews through a form, Read reviews on the landing page, Edit and Delete reviews with the click of a button.
 
